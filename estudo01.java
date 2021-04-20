@@ -1,3 +1,8 @@
+/**
+ * Ler e gravar arquivos texto
+ * Referência: https://www.w3schools.com/java/java_files.asp
+ */
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
