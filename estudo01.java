@@ -7,31 +7,33 @@ import java.io.File;
 import java.io.FileWriter;
 //import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.Scanner;
 
 public class estudo01
 {
-    public static void processarArquivo(String arq)
+    public static void escreverArquivo(String texto, String arquivo) throws IOException
     {
-        // Abrir o arquivo para escrita
-        try
-        {
-            FileWriter arquivo = new FileWriter(arq);
-            Scanner texto = new Scanner(System.in);
-            String mensagem;
-            funcoes.escrever("Digite o texto a ser escrito no arquivo:");
-            mensagem = texto.nextLine();
-            texto.close();
+        Path caminho = Paths.get(arquivo);
+        Files.write(caminho, texto.getBytes(), StandardOpenOption.APPEND);
+    }
 
-            if (!mensagem.isEmpty()){
-                arquivo.write(mensagem);
-                funcoes.escrever("Texto escrito no arquivo.");
-            }
-           
-            arquivo.close();
-        }
-        catch (IOException exc){
-            funcoes.escrever(exc.getMessage());
+    public static void processarArquivo(String arquivo)
+    {
+        Scanner texto = new Scanner(System.in);
+        String mensagem;
+        funcoes.escrever("Digite o texto a ser escrito no arquivo:");
+        mensagem = texto.nextLine();
+        texto.close();
+
+        try {
+            escreverArquivo(mensagem + "\n", arquivo);
+        } catch(IOException exc) {
+            funcoes.escrever("Exceção ocorrida: " + exc.getMessage());
         }
     }
 
