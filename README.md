@@ -12,6 +12,9 @@ Alguns objetivos que pretendo alcançar:
 - Comunicação com webservices REST
 - UI simplificada
 
+## estudo02.java
+
 - O arquivo estudo02.java está usando Orientação a Objetos, onde é montado um 
 cenário de esportes, inicialmente com Futebol, que é a classe principal, herdando 
-da classe Esporte e agregando a classe Time, e essa agrega um array da classe Jogador.
+da classe Esporte e agregando a classe Time, e essa agrega um array da classe Jogador 
+dependendo do número de jogadores que for informado na criação do esporte em questão.

@@ -5,13 +5,13 @@
 package classes;
 
 public class Esporte {
-    // Descrição do espoerte estanciado
+    // Descrição do esporte criado
     protected String descricao;
 
     // Contar quantos esportes foram iniciados
     public static int contagem;
 
-    // Características do time que está sendo montado
+    // Características do time que está sendo montado para o esporte
     public Time time;
 
     public static int getNumEsportes()
