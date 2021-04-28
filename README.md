@@ -7,6 +7,7 @@ Alguns objetivos que pretendo alcançar:
 
 - Ler e escrever arquivos texto (estudo01.java)
 - Aplicação dos conceitos de Orientação a Objetos (estudo02.java)
+- Tratamento de exceções (estudo03.java)
 - Persistência em banco de dados (MySQL)
 - Leitura e gravação de arquivos XML e JSON
 - Comunicação com webservices REST
